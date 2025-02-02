@@ -1,9 +1,13 @@
-.landing{
-    background-color: black;
+.landing, .gallery, .categories{
     height: 100vh;
 }
-
+.landing{
+    background-color: black;
+}
 .gallery{
-    background-color: grey;
-    height: 100vh;
+    background-color: darkslateblue;
+    
+}
+.categories{
+    background-color: rgb(66, 0, 94);
 }
