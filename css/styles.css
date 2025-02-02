@@ -1,8 +1,25 @@
+body{
+    overflow-x: hidden;
+}
 .landing, .gallery, .categories{
     height: 100vh;
+    width: 100vw;
 }
+
 .landing{
-    background-color: black;
+    background-image: url('/images/BG.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing::after{
+    content: '';
+    position: absolute;
+    top:0;right: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.5;
+    background-color: #000000a3;
 }
 .gallery{
     background-color: darkslateblue;
@@ -10,4 +27,59 @@
 }
 .categories{
     background-color: rgb(66, 0, 94);
+}
+
+.rathinam-grand-fest, .dates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+    padding: 20px 20px 0px 20px;
+}
+.rathinam-grand-fest{
+    margin-bottom: 30px;
+}
+.rathinam-grand-fest img, .dates img {
+width: 100%; 
+max-width: 300px; /* Limit maximum size */
+height: auto; /* Maintain aspect ratio */
+}
+
+#rathinam {
+max-width: 280px;
+}
+#grand {
+max-width: 180px; 
+}
+#fest {
+max-width: 110px; 
+}
+
+#date1 {
+    max-width: 80px;
+}
+#to {
+    max-width: 50px; 
+}
+#date2 {
+    max-width: 80px; 
+}
+#march{
+    max-width: 150px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.celebs{
+    align-self: center;
+    margin-top: auto;
 }
