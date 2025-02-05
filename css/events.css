@@ -8,7 +8,9 @@ a{ text-decoration: none;}
     max-width: 80vw;
     background-color: rgb(127, 84, 151);
     margin: 0 auto;
-    height: 100vh;
+    height: auto;
+    padding: 35px;
+    box-sizing: border-box;
 }
 
 .events-container h1{
