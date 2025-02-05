@@ -1,0 +1,15 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.events-container{
+    max-width: 80vw;
+    background-color: rgb(127, 84, 151);
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.events-container h1{
+    text-align: center;
+}
