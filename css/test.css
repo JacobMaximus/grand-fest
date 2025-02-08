@@ -1,40 +1,112 @@
 
-.celeb-carousel {
+/* .celeb-carousel {
     position: absolute;
     bottom: 10%;
     left: 55%;
     transform: translateX(-50%);
-    /* transform: rotate(-5deg); */
     width: 280px;
     height: 280px;
     overflow: hidden;
 
     z-index: 1;
-}
-.celeb-carousel img{
-    /* width: 220px; */
-}
+} */
+
 .celebs{
     display: flex;
     position: absolute;
-    bottom: 0%;
+    bottom: 0px;
 }
-.celeb-img {
-    width: 75%;
+/* .celeb-img {
+    left: 10%;
+    width: 70%;
     height: auto;
     position: absolute;
     opacity: 0;
-}
+} */
 
-.celebs img{
+.celebs #blob{
     z-index: 2;
+    width: 18rem;
 }
 
+/* CELEB CAROUSELL */
+.container .wrapper div {
+  transition: 0.8s;
+}
+
+@keyframes turner {
+  0% {
+    transform: rotateY(0deg);
+  }
+  10% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  60% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.container {
+  position: relative;
+  perspective: 800px;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.wrapper {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.strip {
+  width: 400px;
+  height: 20px; /* Adjusted height */
+  background-size: 400px 400px;
+  background-repeat: no-repeat;
+  backface-visibility: visible;
+  animation: turner 20s infinite;
+}
+
+:root {
+    --carousel-size: 200px; /* Change this to resize the whole thing */
+  }
+  
+  .container {
+    width: var(--carousel-size);
+    height: var(--carousel-size);
+  }
+  
+  .wrapper {
+    width: var(--carousel-size);
+    height: var(--carousel-size);
+  }
+  
+  .strip {
+    width: var(--carousel-size);
+    height: calc(var(--carousel-size) / 20); /* Divides image properly */
+    background-size: var(--carousel-size) var(--carousel-size);
+  }
+
+.container{
+  position: absolute;
+  z-index: 1;
+  bottom: 135px;
+  left: 12%;
+}
 
 /* GALLERY CAROUSEL */
 .gallery-rgf{
     margin:0;
-    height:100vh;
+    height:80vh;
     display:grid;
     place-items:center;
     background-color:#010101;
@@ -47,7 +119,7 @@
     transform-style:preserve-3d;
     animation:rotate 35s linear infinite;
   }
-  
+
   @keyframes rotate{
     from{
       transform:perspective(1200px) rotateY(0deg);
@@ -142,3 +214,55 @@
   .card{
     margin: 10px 0;
   }
+
+/* BUTTONS: */
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+  z-index: 1;
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: .25em solid var(--glow-color);
+  padding: 0.8em 2em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .005em var(--glow-color),
+         0 0 4em 0.1em var(--glow-spread-color),
+         inset 0 0 .75em .05em var(--glow-color);
+  text-shadow: 0 0 .05em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ /* button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ } */
+ 
+ button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ button:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }

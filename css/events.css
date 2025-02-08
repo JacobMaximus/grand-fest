@@ -19,6 +19,7 @@ a{ text-decoration: none;}
 
 .activity{
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 dialog{
     justify-self: center;

@@ -1,0 +1,66 @@
+.container .wrapper div {
+  transition: 0.5s;
+}
+
+@keyframes turner {
+  0% {
+    transform: rotateY(0deg);
+  }
+  10% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  60% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.container {
+  position: relative;
+  perspective: 800px;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.wrapper {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.strip {
+  width: 400px;
+  height: 20px; /* Adjusted height */
+  background-size: 400px 400px;
+  background-repeat: no-repeat;
+  backface-visibility: visible;
+  animation: turner 20s infinite;
+}
+
+:root {
+    --carousel-size: 300px; /* Change this to resize the whole thing */
+  }
+  
+  .container {
+    width: var(--carousel-size);
+    height: var(--carousel-size);
+  }
+  
+  .wrapper {
+    width: var(--carousel-size);
+    height: var(--carousel-size);
+  }
+  
+  .strip {
+    width: var(--carousel-size);
+    height: calc(var(--carousel-size) / 20); /* Divides image properly */
+    background-size: var(--carousel-size) var(--carousel-size);
+  }
+  

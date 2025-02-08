@@ -1,11 +1,15 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap'); */
+html{
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
 body{
     overflow-x: hidden;
     /* font-family: "Rakkas", serif;
     font-weight: 400;
     font-style: normal; */
-    font-family: 'RX100', sans-serif;
+    /* font-family: 'RX100', sans-serif; */
     /* font-family: "Abril Fatface", serif;
   font-weight: 400;
   font-style: normal;
@@ -15,7 +19,8 @@ a{
     text-decoration: none;
 }
 .landing, .gallery{
-    height: 100vh;
+    height: 100svh;
+    /* min-height: -webkit-fill-available; */
     width: 100vw;
 }
 .categories{
@@ -57,7 +62,7 @@ a{
     padding: 20px 20px 0px 20px;
 }
 .rathinam-grand-fest{
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .rathinam-grand-fest img, .dates img {
 width: 100%; 
@@ -96,7 +101,7 @@ max-width: 110px;
     justify-content: center;
 
     position: relative;
-    top: -4%;
+    top: -13%;
 }
 
 .celebs{
@@ -118,8 +123,8 @@ max-width: 110px;
     overflow: hidden;
 }
 .gallery-rgf h1, .categories h1{
-    margin: 0;
-    padding: 10px;
+    /* margin: 0; */
+    /* padding: 10px; */
     text-align: center;
     
 }
