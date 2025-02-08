@@ -16,3 +16,25 @@ a{ text-decoration: none;}
 .events-container h1{
     text-align: center;
 }
+
+.activity{
+    cursor: pointer;
+}
+dialog{
+    justify-self: center;
+    align-self: center;
+    max-width: 40%;
+    min-width: 40%;
+}
+
+#modal-heading{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 1000px) {
+    dialog{
+        margin: 20px;
+        max-width: none;
+        min-width: none;
+    }
+}

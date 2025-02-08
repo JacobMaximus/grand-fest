@@ -22,7 +22,7 @@ code {
     monospace;
 }
 
-.nft{
+.activity{
   flex: 0 0 auto;
   user-select:none;
   max-width: 300px;
@@ -49,7 +49,7 @@ code {
     flex-direction: column;
     width: 90%;
     padding: 1rem;
-    .tokenImage{
+    .activityImage{
       border-radius: .5rem;
       max-width: 100%;
       height: 250px;
@@ -59,7 +59,7 @@ code {
     //   margin: .5rem 0;
     //   color: #a89ec9;
     // }
-    .tokenInfo{
+    .activityInfo{
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -109,14 +109,14 @@ code {
 }
 
 @media screen and (max-width: 768px) {
-  .nft {
+  .activity {
     transform: scale(0.9);
     margin-bottom: -3rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .nft {
+  .activity {
     transform: scale(0.8);
     // margin-bottom: -100px;
     margin-bottom: -5.8rem;
@@ -124,7 +124,7 @@ code {
 }
 
 /* hover effect on click for mobile */
-// .nft:active {
+// .activity:active {
 //   border: 1px solid #ffffff44;
 //   box-shadow: 0 7px 50px 10px #000000aa;
 //   transform: scale(1.015);
