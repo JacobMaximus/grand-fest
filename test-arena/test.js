@@ -11,11 +11,11 @@
 // })
 // const dialogBox = document.querySelector('dialog');
 
-
 const eventDivs = document.querySelectorAll('.event'); // Select all event divs
 const closeButton = document.querySelector('[data-close-modal]');
 const modal = document.querySelector('[data-modal]');
 const modalContent = document.getElementById('modal-content');
+const modalHeading = document.getElementById('modal-heading');
 
 // Function to fetch and show event details
 function openModal(event) {
@@ -27,18 +27,28 @@ function openModal(event) {
             const eventData = data.find(event => event.id == eventId); // Find event by ID
 
             if (eventData) {
+                // Clear existing title before adding a new one
+                modalHeading.innerHTML = `<h2>${eventData.title}</h2><button data-close-modal>&times;</button>`;
+
                 // Fill modal with event details
                 modalContent.innerHTML = `
-                    <h2>${eventData.title}</h2>
-                    <p><strong>Date:</strong> ${eventData.date}</p>
-                    <p><strong>Description:</strong> ${eventData.description || "No description available."}</p>
-                    <p><strong>Rules:</strong></p>
-                    <ul>${eventData.rules.map(rule => `<li>${rule}</li>`).join('')}</ul>
-                    <p><strong>Cost:</strong> ${eventData.cost}</p>
-                    <p><strong>Contact:</strong> ${eventData.contact}</p>
+                    <div class="event-details">
+                        <p><strong>Date:</strong> ${eventData.date}</p>
+                        <p><strong>Description:</strong> ${eventData.description || "No description available."}</p>
+                        <p><strong>Rules:</strong></p>
+                        <ul>${eventData.rules.map(rule => `<li>${rule}</li>`).join('')}</ul>
+                        <p><strong>Cost:</strong> ${eventData.cost}</p>
+                        <p><strong>Contact:</strong> ${eventData.contact}</p>
+                    </div>
                 `;
 
                 modal.showModal(); // Open modal
+
+                // Reattach close button event since we replaced modalHeading
+                document.querySelector('[data-close-modal]').addEventListener('click', () => {
+                    modal.close();
+                });
+
             } else {
                 console.error(`No event found with ID ${eventId}`);
             }
@@ -51,7 +61,7 @@ eventDivs.forEach(div => {
     div.addEventListener('click', openModal);
 });
 
-// Close modal on button click
-closeButton.addEventListener('click', () => {
-    modal.close();
-});
+// Close modal on button click (initial close button)
+// closeButton.addEventListener('click', () => {
+//     modal.close();
+// });

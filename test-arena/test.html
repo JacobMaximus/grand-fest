@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing Playground</title>
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="test.css">
+    
 </head>
 <body>
 
-    <!-- Event Divs (Each will have a unique data-id) -->
     <div class="event" data-id="1">Techno Quiz</div>
     <div class="event" data-id="2">Horobo</div>
     <div class="event" data-id="3">Coding Challenge</div>
-<div class="event" data-id="4">AI Hackathon</div>
-
-
+    <div class="event" data-id="4">AI Hackathon</div>
+    
     <!-- Modal -->
     <dialog data-modal>
+        <div id="modal-heading">
+            <!-- <button data-close-modal>Close</button> -->
+        </div>
+        
         <div id="modal-content"></div>
-        <button data-close-modal>Close</button>
+        <button class = 'register'>Register</button>
     </dialog>
 
     <script src="test.js"></script>
-
     <!-- <button data-open-modal>Open</button>
     <dialog data-modal>
         
