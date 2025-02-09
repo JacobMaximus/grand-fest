@@ -10,42 +10,58 @@
     <!-- <link href="https://api.fontshare.com/v2/css?f[]=rx-100@400&display=swap" rel="stylesheet"> -->
 </head>
 <body>
-    <div class="landing">
-        <div class="register-now">
-            <a href = '#categories'>
-                <button>Events</button>
-            </a>
-        </div>
-        <div class="main">
-            <!-- insert svg -->
-            <div class="rathinam-grand-fest">
-                <img id = 'rathinam' src = './images/rathinam-grand-fest/Rathinam.svg'>
-                <img id = 'grand' src = './images/rathinam-grand-fest/Grand.svg'>
-                <img id = 'fest' src = './images/rathinam-grand-fest/Fest.svg'>
-            </div>
-
-            <div class="dates">
-                <img id = 'date1' src = './images/date/date1.svg'>
-                <img id = 'to' src = './images/date/to.svg'>
-                <img id = 'date2' src = './images/date/date2.svg'>
-                <img id = 'march' src = './images/date/march.svg'>
-            </div>
-
+    <div class="parallax-slide">
+        <div class="parallax-clip">
             
-        </div>
+            <div class="landing fixed-parallax">
+                <div class="register-now">
+                    <a href = '#categories'>
+                        <button>Events</button>
+                    </a>
+                </div>
+                <div class="main ">
+                    <!-- insert svg -->
+                    <div class="rgf-container">
+                        <div class="rgf-halo">
+                            <img id = 'rgf' src="/images/RGF.svg" alt="RGF">
+                            <img id = 'halo' src="/images/halo.svg" alt="RGF-Halo">
+                        </div>
+                        <img id = 'orb' src="/images/orb.gif" alt="RGF-orb">
+                    </div>
+                    <div class="rathinam-grand-fest">
+                        <img id = 'rathinam' src = '/images/rathinam-grand-fest/Rathinam.svg'>
+                        <img id = 'grand' src = '/images/rathinam-grand-fest/Grand.svg'>
+                        <img id = 'fest' src = '/images/rathinam-grand-fest/Fest.svg'>
+                    </div>
         
-        <div class="celebs">
-            <section class="container">
-                <section class="wrapper">
-                  <div class="one" data-index="0"></div>
-                  <div class="one2" data-index="1"></div>
-                  <div class="one3" data-index="2"></div>
-                  <div class="one4" data-index="3"></div>
-                  <div class="one5" data-index="4"></div>
-                  <div class="one6" data-index="5"></div>
-                </section>
-            </section>
-            <img id = 'blob' src = './images/blob1.gif'>
+                    <div class="dates">
+                        <img id = 'date1' src = '/images/date/date1.svg'>
+                        <img id = 'to' src = '/images/date/to.svg'>
+                        <img id = 'date2' src = '/images/date/date2.svg'>
+                        <img id = 'march' src = '/images/date/march.svg'>
+                    </div>
+        
+                    <div class="rathinam-grand-fest-2">
+                        <img id = 'rathinam' src = '/images/rathinam-grand-fest/Rathinam.svg'>
+                        <img id = 'grand' src = '/images/rathinam-grand-fest/Grand.svg'>
+                        <img id = 'fest' src = '/images/rathinam-grand-fest/Fest.svg'>
+                    </div>
+                </div>
+                
+                <div class="celebs">
+                    <section class="container">
+                        <section class="wrapper">
+                          <div class="one" data-index="0"></div>
+                          <div class="one2" data-index="1"></div>
+                          <div class="one3" data-index="2"></div>
+                          <div class="one4" data-index="3"></div>
+                          <div class="one5" data-index="4"></div>
+                          <div class="one6" data-index="5"></div>
+                        </section>
+                    </section>
+                    <img id = 'blob' src = '/images/blob1.gif'>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -83,10 +99,17 @@
 
     </div>
 
+    <div class="parallax-slide">
+        <div class="parallax-clip">
+            <div class="layer3 fixed-parallax">
+                <h1>PICK YOUR VIBE</h1>
+            </div>
+        </div>
+    </div>
+
     <div class="categories" id = "categories">
-        <h1>PICK YOUR VIBE</h1>
         <div class="event-categories">
-            <a href ='./pages/engineering/tech/tech-event.html'>
+            <a href ='/pages/engineering/tech/tech-event.html'>
                 <div class="card">
                     <p class="heading">Technical Event</p>
                     <p>By</p>
@@ -130,7 +153,7 @@
             </div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="./js/celeb-carousel.js"></script>
-    <script src = './js/test.js'></script>
+    <script src="/js/celeb-carousel.js"></script>
+    <script src = '/js/test.js'></script>
 </body>
 </html> 
