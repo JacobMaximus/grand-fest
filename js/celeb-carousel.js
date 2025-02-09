@@ -1,3 +1,4 @@
+// Strips-spinning animtation for celeb-carousel
 const images = [
     "https://rathinamfest.com/assets/images/01.png",
     "https://rathinamfest.com/assets/images/02.png",
@@ -51,5 +52,35 @@ const images = [
 setTimeout(updateImages, 8595); // Runs every 10s (twice as fast)
 
 
+// Wave animation for celeb-carrousel
+window.addEventListener("load", () => {
+  const waveTimeline = gsap.timeline({ repeat: -1, yoyo: true });
+
+  waveTimeline
+      .to(".wrapper", {
+          y: 35, // Moves up
+          rotation: 1.5, // Small tilt for a natural effect
+          duration: 1.5, // Faster than before
+          ease: "sine.inOut"
+      })
+      .to(".wrapper", {
+          y: -20, // Moves down
+          rotation: -1.5, // Tilts the other way
+          duration: 1.2, // Slightly different timing
+          ease: "sine.inOut"
+      })
+      .to(".wrapper", {
+          y: 25, // Moves up again
+          rotation: 1, // Less tilt
+          duration: 1.8, // Slight delay
+          ease: "sine.inOut"
+      })
+      .to(".wrapper", {
+          y: -15, // Moves down
+          rotation: -0.5, // Barely tilts
+          duration: 1.5, // Natural timing
+          ease: "sine.inOut"
+      });
+});
 
   

@@ -1,168 +1,74 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap'); */
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 html{
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
 }
 body{
     overflow-x: hidden;
+    /* font-family: 'ICA Rubrik'; */
     /* font-family: "Rakkas", serif;
     font-weight: 400;
     font-style: normal; */
     /* font-family: 'RX100', sans-serif; */
     /* font-family: "Abril Fatface", serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 1.5px; */
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1.5px; */
 }
+
 a{
     text-decoration: none;
 }
-.landing, .gallery{
-    height: 100svh;
-    /* min-height: -webkit-fill-available; */
-    width: 100vw;
-}
-.categories{
-    height: auto;
-    padding: 30px;
-}
 
-.landing{
-    background-image: url('/images/BG.png');
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.landing::after{
-    content: '';
-    position: absolute;
-    top:0;right: 0;
-    height: 100vh;
-    width: 100vw;
-    opacity: 0.5;
-    background-color: #000000a3;
-}
-.gallery{
-    background-color: darkslateblue;
-    
-}
-.categories{
-    background-color: rgb(66, 0, 94);
-}
-
-.rathinam-grand-fest, .dates {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    position: relative;
+/* BUTTONS: */ 
+button {
     z-index: 1;
-    padding: 20px 20px 0px 20px;
-}
-.rathinam-grand-fest{
-    margin-bottom: 15px;
-}
-.rathinam-grand-fest img, .dates img {
-width: 100%; 
-max-width: 300px; /* Limit maximum size */
-height: auto; /* Maintain aspect ratio */
-}
-
-#rathinam {
-max-width: 280px;
-}
-#grand {
-max-width: 180px; 
-}
-#fest {
-max-width: 110px; 
-}
-
-#date1 {
-    max-width: 80px;
-}
-#to {
-    max-width: 50px; 
-}
-#date2 {
-    max-width: 80px; 
-}
-#march{
-    max-width: 150px;
-}
-
-.landing .main{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 0.8em 2em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .005em var(--glow-color),
+            0 0 4em 0.1em var(--glow-spread-color),
+            inset 0 0 .75em .05em var(--glow-color);
+    text-shadow: 0 0 .05em var(--glow-color);
     position: relative;
-    top: -13%;
+    transition: all 0.3s;
 }
-
-.celebs{
-    align-self: center;
-    margin-top: auto;
-}
-
-.register-now{
+   
+/* button::after {
+    pointer-events: none;
+    content: "";
     position: absolute;
-    right: 6%;
-    top: 4%;
-    margin: 0;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+} */
+   
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 4em 2em var(--glow-spread-color),
+            inset 0 0 .75em .25em var(--glow-color);
 }
 
-
-/* GALLERY: */
-.gallery-rgf{
-    background-color: black;
-    overflow: hidden;
-}
-.gallery-rgf h1, .categories h1{
-    /* margin: 0; */
-    /* padding: 10px; */
-    text-align: center;
-    
-}
-
-/* EVENT CATEGORIES */
-
-.event-categories {
-    display: grid;
-    gap: 20px;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-    justify-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Mobile: 1 card per row */
-@media (max-width: 599px) {
-    .event-categories {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-/* Tablet: 2 cards per row */
-@media (min-width: 600px) and (max-width: 899px) {
-    .event-categories {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Desktop: 4 cards per row */
-@media (min-width: 900px) {
-    .event-categories {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.event-categories .card p{
-    margin: 2px;
+button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+            0 0 2.5em 2em var(--glow-spread-color),
+            inset 0 0 .5em .25em var(--glow-color);
 }

@@ -11,7 +11,7 @@ function openModal(event) {
     const eventId = activityDiv.getAttribute('data-id');
     if (!eventId) return;
 
-    fetch('eventData.json') 
+    fetch('./eventData.json') 
         .then(response => response.json())
         .then(data => {
             const eventData = data.find(event => event.id == eventId);
