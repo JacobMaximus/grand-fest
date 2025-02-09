@@ -1,0 +1,40 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.events-container{
+    max-width: 80vw;
+    background-color: rgb(127, 84, 151);
+    margin: 0 auto;
+    height: auto;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+.events-container h1{
+    text-align: center;
+}
+
+.activity{
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+dialog{
+    justify-self: center;
+    align-self: center;
+    max-width: 40%;
+    min-width: 40%;
+}
+
+#modal-heading{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 1000px) {
+    dialog{
+        margin: 20px;
+        max-width: none;
+        min-width: none;
+    }
+}

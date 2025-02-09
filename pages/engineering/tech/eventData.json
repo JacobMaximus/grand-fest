@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "title": "Techno Quiz",
+        "date": "11th March 2025",
+        "description": "",
+        "rules": ["Maximum 2 members per team.", " With this entry fee, you may attend many technical events as possible."],
+        "cost": "₹250",
+        "contact": "86670 74778, 96005 89904"
+    },
+    {
+        "id": 2,
+        "title": "Horobo",
+        "date": "12th March 2025",
+        "description": "Horobo is a Human interactive robot design contest, where you can make use of basic sensors and electronics and build a feedback control system of any bodily movement.",
+        "rules": ["A team can contain at most 3 members more than that can't be encouraged.", " Must be present at the allocated area when your called no delays in presentation will be encouraged.", "Participants must explain their innovation within 5 mins."],
+        "cost": "₹250",
+        "contact": "99655 12421, 93845 78349"
+    },
+    {
+        "id": 3,
+        "title": "Coding Challenge",
+        "date": "13th March 2025",
+        "description": "Solve programming challenges.",
+        "rules": ["Solo event.", "Use any programming language."],
+        "cost": "₹300",
+        "contact": "98765 43210"
+    }
+    
+    
+]
