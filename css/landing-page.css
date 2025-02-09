@@ -6,6 +6,12 @@
     left: 12%; */
 
 /* LANDING PAGE */
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
 .landing{
     height: 100svh;
     width: 100vw;
@@ -624,3 +630,5 @@
         z-index: 10;
     }
 }
+
+

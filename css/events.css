@@ -2,10 +2,16 @@
     display: flex;
     justify-content: space-between;
 }
-
+body{
+    /* background-image: url(/images/events-page.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
 .events-container{
     max-width: 80vw;
-    background-color: rgb(127, 84, 151);
+    /* background-color: rgb(127, 84, 151); */
     margin: 0 auto;
     height: auto;
     padding: 35px;
