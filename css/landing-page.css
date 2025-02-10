@@ -31,7 +31,11 @@ footer{
     height: 100vh;
     width: 100vw;
     opacity: 0.5;
-    background-color: #000000a3;
+    background: linear-gradient(
+        rgba(195, 1, 195, 0.25) 0%,
+        rgba(162, 0, 127, 0.25) 86%,
+        rgba(1, 0, 0, 1.25) 100%
+      );
 }
 .rgf-container{
     display: none;
@@ -87,6 +91,14 @@ footer{
     position: relative;
     top: -13%;
 }
+/* .gradient{
+    background: linear-gradient(
+    rgba(205, 105, 252, 0.25) 0%,
+    rgba(71, 47, 255, 0.25) 86%,
+    rgba(1, 0, 0, 0.25) 100%
+  );
+} */
+
 
 .register-now{
     position: absolute;
@@ -314,7 +326,13 @@ footer{
         font-size: 5em;
     }
 }
-
+/* .banner{
+    background: linear-gradient(
+        rgba(195, 1, 195, 0.25) 0%,
+        rgba(162, 0, 127, 0.25) 86%,
+        rgba(1, 0, 0, 1.25) 100%
+      );
+} */
 /* Extra Styling: */
 .gallery-rgf *{
     margin: 0;
@@ -322,16 +340,16 @@ footer{
     box-sizing: border-box;
 }
 .gallery-rgf{
-    background-color: #292727;
+    background-color: #2e002161;
     background-image:
             repeating-linear-gradient(
             to right, transparent 0 100px,
-            #c0c0c022 100px 101px
+            #72757e 100px 101px
             ),
 
             repeating-linear-gradient(
             to bottom, transparent 0 100px,
-            #b5b5b522 100px 101px
+            #72757e 100px 101px
             );
 }
 
@@ -351,12 +369,21 @@ footer{
 }
   
 .item img{
-    border: 1px white solid;
+    /* border: 1px white solid; */
     border-radius: 10px;
+}
+.item::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
 }
 /* EVENT CATEGORIES */
 .categories{
-    background-color: black;
+    background-color: #010101;
     height: auto;
     padding: 30px;
 }
