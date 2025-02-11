@@ -6,6 +6,13 @@
     left: 12%; */
 
 /* LANDING PAGE */
+.register-now{
+    position: absolute;
+    right: 6%;
+    top: 4%;
+    margin: 0;
+}
+
 footer{
     background-color: black;
     color: white;
@@ -630,10 +637,7 @@ footer{
     opacity: 0.5;
     background-color: #600055a3;
 }
-.layer3 h1{
-    margin: 0;
-    padding: 0;   
-}
+
 
 .rathinam-grand-fest-2{
     display: none;
@@ -734,8 +738,13 @@ footer{
     }
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
 .layer3 h1{
+    margin: 0;
+    padding: 0;   
+    
+    
+
     font-size: 6rem;
     text-align: center;
     z-index: 10;
@@ -743,14 +752,14 @@ footer{
     color: #d5b5de;
     position: relative;
 }
-.layer3 h1::after{
+/* .layer3 h1::after{
     position: absolute;
     inset: 0 0 0 0;
     content: attr(data-content);
     z-index: 2;
     -webkit-text-stroke: 4px #860b88;
     color: transparent;
-}
+} */
 .layer3::after{
     content: '';
     position: absolute;
@@ -764,4 +773,11 @@ footer{
         rgba(162, 0, 127, 0.25) 86%,
         rgba(1, 0, 0, 1.25) 100%
       ); */
+}
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+.layer3 h1{
+    font-family: "Yatra One", serif;
+  font-weight: 400;
+  font-style: normal;
+    
 }

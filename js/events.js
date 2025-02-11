@@ -18,7 +18,7 @@ function openModal(event) {
 
             if (eventData) {
                 
-                modalHeading.innerHTML = `<h2>${eventData.title}</h2><button data-close-modal>&times;</button>`;
+                modalHeading.innerHTML = `<h2>${eventData.title}</h2><button id = 'btn-close' data-close-modal>&times;</button>`;
 
                 
                 modalContent.innerHTML = `

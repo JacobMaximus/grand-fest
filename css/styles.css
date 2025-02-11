@@ -74,9 +74,3 @@ button:active {
             inset 0 0 .5em .25em var(--glow-color);
 }
 
-.register-now{
-    position: absolute;
-    right: 6%;
-    top: 4%;
-    margin: 0;
-}

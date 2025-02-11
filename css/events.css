@@ -2,6 +2,20 @@
     display: flex;
     justify-content: space-between;
 }
+
+#home button{
+  margin: 50px 0px 0px 50px;
+}
+#events button{
+  margin: 50px 50px 0px 0px;
+
+}
+/* button:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+          0 0 2.5em 2em var(--glow-spread-color),
+          inset 0 0 .5em .25em var(--glow-color);
+
+} */
 body{
     /* background-image: url(/images/events-page.png); */
     background-size: cover;
@@ -45,12 +59,16 @@ dialog{
 #modal-heading{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 @media (max-width: 1000px) {
     dialog{
         margin: 20px;
         max-width: none;
         min-width: none;
+    }
+    #home button, #events button{
+      margin: 10px;
     }
 }
 
@@ -102,4 +120,42 @@ dialog{
     transition: all 0.5s ease-out;
   }
 
- 
+dialog{
+  color: white;
+  background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
+  border: 4px #0f0529 solid;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 5px 40px 20px 40px;
+  box-shadow: 10px 5px 25px #4a2574, -10px -5px 25px #7338a0;
+  
+}
+
+button#btn-close {
+  border: .1em solid var(--glow-color);
+  padding: 0.5rem 0.8rem;
+  border-radius: 1em;
+  font-size: 1rem;
+
+}
+button#btn-close:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .1em var(--glow-color),
+          0 0 3em .1em var(--glow-spread-color),
+          inset 0 0 .75em .25em var(--glow-color);
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
+}
+/* button#btn-close{
+  padding: 5px;
+  padding-bottom: -50px;
+  flex: 0;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+h2, p, li{
+  letter-spacing: 0.1rem;
+  font-family: "Yatra One", serif;
+}
