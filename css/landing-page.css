@@ -507,7 +507,7 @@ footer{
       gap: .5ch;
     } */
   }
-  .layer3 section {
+  .layer3 section, .events-container section {
     /* min-block-size: 100%; */
     /* font-family: system-ui, sans-serif; */
 
@@ -548,14 +548,15 @@ footer{
   font-weight: 400;
   font-style: normal;
 }
-.layer3{
+.layer3.fixed-parallax{
     height: 60vh;
     width: 60vw;
     margin: 0 auto;
-    
+    margin-top: 13rem;
 }
 .black{
     /* height: 5rem; */
+    /* background-color: red; */
 }
 /* .parallax-slide > .layer3{
     height: 60vh;
@@ -587,7 +588,10 @@ footer{
     }
     h1{
         letter-spacing: 0.2ch;
-
+    }
+    .layer3.fixed-parallax{
+        width: 100vw;
+        height: 70vh;
     }
 }
 
@@ -703,7 +707,27 @@ footer{
     background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2024-12/22/full/1734884073-0374.jpg?im=FitAndFill);
 }
 
-
+/* TEST GROUND: */
+/* .card{
+    width: 250px;
+    height: 314px;
+}
+.card::before{
+    width: 260px;
+    height: 324px;
+} */
+/* mobile: */
+@media (max-width: 599px) {
+    
+}
+/* tablet: */
+@media (min-width: 600px) and (max-width: 899px) {
+    
+}
+/* desktop: */
+@media (min-width: 900px) {
+    
+}
 /* ----------------PARALLAX EFFECT:------------------- */
 
 

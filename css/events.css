@@ -157,5 +157,6 @@ dialog::backdrop {
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 h2, p, li{
   letter-spacing: 0.1rem;
-  font-family: "Yatra One", serif;
+  font-family: "Yatra One", georgia;
+  font-family: "ICA Rubrik", serif;
 }
