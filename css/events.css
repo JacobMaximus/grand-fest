@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .nav{
     display: flex;
     justify-content: space-between;
@@ -126,7 +129,7 @@ dialog{
   border: 4px #0f0529 solid;
   border-radius: 10px;
   box-sizing: border-box;
-  padding: 5px 40px 20px 40px;
+  padding: 5px 40px 35px 45px;
   box-shadow: 10px 5px 25px #4a2574, -10px -5px 25px #7338a0;
   
 }
@@ -154,9 +157,72 @@ dialog::backdrop {
   padding-bottom: -50px;
   flex: 0;
 } */
+
+.events-container{
+  padding-top: 0;
+}
+.container{
+  padding-top: 0;
+}
+@media (max-width: 599px) {
+  h1{
+    letter-spacing: -.1ch;
+    font-size: 4rem;
+    margin: 0;
+    margin-top: 1rem;
+}
+.container{
+  padding-top: 0;
+}
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  h1{
+    letter-spacing: -.1ch;
+    font-size: 5rem;
+    margin: 0;
+
+  }
+}
+/* @media (max-width: 634px) and (max-width: 889px) {
+  .container{
+    padding-top: 100px ;
+  }
+} */
+
+/* DIALOG FONTS: */
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
-h2, p, li{
+/* h2, p, li{
   letter-spacing: 0.1rem;
   font-family: "Yatra One", georgia;
   font-family: "ICA Rubrik", serif;
+} */
+
+h2, p, li{
+  font-family: "Tomorrow", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height:1.8rem;
 }
+
+h2{
+  font-weight: 900;
+  font-size: 1.9rem;
+  padding-top: 10px;
+  margin-bottom: 0;
+  font-family: "Tomorrow", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+button.register{
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+strong{
+  font-family: "Tomorrow", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
