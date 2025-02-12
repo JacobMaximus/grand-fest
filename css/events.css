@@ -1,81 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-.nav{
-    display: flex;
-    justify-content: space-between;
-}
-
-#home button{
-  margin: 50px 0px 0px 50px;
-}
-#events button{
-  margin: 50px 50px 0px 0px;
-
-}
-/* button:active {
-  box-shadow: 0 0 0.6em .25em var(--glow-color),
-          0 0 2.5em 2em var(--glow-spread-color),
-          inset 0 0 .5em .25em var(--glow-color);
-
-} */
 body{
-    /* background-image: url(/images/events-page.png); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #232946;
-}
-.events-container{
-    max-width: 80vw;
-    /* background-color: rgb(127, 84, 151); */
-    margin: 0 auto;
-    height: auto;
-    padding: 35px;
-    box-sizing: border-box;
+  /* background-image: url(/images/events-page.png); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #232946;
 }
 
-.events-container h1{
-    text-align: center;
-    color: #fffffe;
-}
-
-.container{
-    max-width: 100rem;
-    /* background-color: black; */
-    margin: 0 auto;  
-    padding: 35px 0 ;
- }
-  
-
-.activity{
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-}
-dialog{
-    justify-self: center;
-    align-self: center;
-    max-width: 40%;
-    min-width: 40%;
-}
-
-#modal-heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-@media (max-width: 1000px) {
-    dialog{
-        margin: 20px;
-        max-width: none;
-        min-width: none;
-    }
-    #home button, #events button{
-      margin: 10px;
-    }
-}
-
-/* BACKGROUND ORB */
+/* ----BACKGROUND ORB---- */
 @keyframes rotate {
     0% {
       transform: rotate(0deg);
@@ -107,7 +41,10 @@ dialog{
     animation: rotate 50s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
-
+  /* This is just to transition when you change the viewport size. */
+  .background * {
+    transition: all 0.5s ease-out;
+  }
   @media (max-width: 720px) {
     .gradient {
       --size: 0px;
@@ -117,12 +54,91 @@ dialog{
     }
     
   }
-  
-  /* This is just to transition when you change the viewport size. */
-  .background * {
-    transition: all 0.5s ease-out;
+/* ------ Animate divs on scroll ----*/
+@keyframes appear{
+	from{
+	  opacity: 0;
+	  scale: 0.5;
+	}
+	to{
+	  opacity: 1;
+	  scale: 1;
+	}
   }
+  .activity{
+	animation: appear linear;
+	animation-timeline: view();
+	animation-range: entry 0 cover 40%;
+  }
+  
 
+/* -----NAV------ */
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+#home button{
+  margin: 50px 0px 0px 50px;
+}
+#events button{
+  margin: 50px 50px 0px 0px;
+
+}
+
+/* ---Pull the heading up--- */
+.paint-order{
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+
+/* ----- EVENT CONTAINER------- */
+.events-container{
+    max-width: 80vw;
+    /* background-color: rgb(127, 84, 151); */
+    margin: 0 auto;
+    height: auto;
+    padding: 35px;
+    box-sizing: border-box;
+	padding-top: 0;
+}
+
+.container{
+    max-width: 100rem;
+    /* background-color: black; */
+    margin: 0 auto;  
+    padding: 35px 0 ;
+	padding-top: 0;
+
+}
+/* ---CARDS---- */
+.activity{
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+dialog{
+    justify-self: center;
+    align-self: center;
+    max-width: 40%;
+    min-width: 40%;
+}
+
+#modal-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 1000px) {
+    dialog{
+        margin: 20px;
+        max-width: none;
+        min-width: none;
+    }
+    #home button, #events button{
+      margin: 10px;
+    }
+}
+
+/* ----DIALOG STYLING:------ */
 dialog{
   color: white;
   background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
@@ -132,6 +148,10 @@ dialog{
   padding: 5px 40px 35px 45px;
   box-shadow: 10px 5px 25px #4a2574, -10px -5px 25px #7338a0;
   
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
 }
 
 button#btn-close {
@@ -148,32 +168,26 @@ button#btn-close:hover {
           0 0 3em .1em var(--glow-spread-color),
           inset 0 0 .75em .25em var(--glow-color);
 }
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(1px);
-}
+button.register{
+	font-size: 1rem;
+	margin-top: 0.5rem;
+  }
 /* button#btn-close{
   padding: 5px;
   padding-bottom: -50px;
   flex: 0;
 } */
 
-.events-container{
-  padding-top: 0;
-}
-.container{
-  padding-top: 0;
-}
 @media (max-width: 599px) {
   h1{
     letter-spacing: -.1ch;
     font-size: 4rem;
     margin: 0;
     margin-top: 1rem;
-}
-.container{
-  padding-top: 0;
-}
+	}
+	.container{
+	padding-top: 0;
+	}
 }
 @media (min-width: 600px) and (max-width: 899px) {
   h1{
@@ -189,14 +203,7 @@ dialog::backdrop {
   }
 } */
 
-/* DIALOG FONTS: */
-@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
-/* h2, p, li{
-  letter-spacing: 0.1rem;
-  font-family: "Yatra One", georgia;
-  font-family: "ICA Rubrik", serif;
-} */
-
+/* -------DIALOG TEXT CONTENT----- */
 h2, p, li{
   font-family: "Tomorrow", serif;
   font-weight: 400;
@@ -213,11 +220,6 @@ h2{
   font-family: "Tomorrow", serif;
   font-weight: 700;
   font-style: normal;
-}
-
-button.register{
-  font-size: 1rem;
-  margin-top: 0.5rem;
 }
 
 strong{
