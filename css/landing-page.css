@@ -5,7 +5,7 @@
     right: 12%;
     left: 12%; */
 
-/* LANDING PAGE */
+/* ------------------LANDING PAGE-------------------- */
 .register-now{
     position: absolute;
     right: 6%;
@@ -17,7 +17,7 @@ footer{
     background-color: black;
     color: white;
     text-align: center;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 .landing{
     height: 100svh;
@@ -44,7 +44,14 @@ footer{
         rgba(162, 0, 127, 0.25) 86%,
         rgba(1, 0, 0, 1.25) 100%
       ); */
+
+    /* background: linear-gradient(
+    rgba(57, 0, 57, 0.25) 0%,
+    rgba(63, 0, 50, 0.25) 86%,
+    rgba(1, 0, 0, 1.25) 100%
+    ); */
 }
+
 .rgf-container{
     display: none;
 }
@@ -60,6 +67,9 @@ footer{
 }
 .rathinam-grand-fest{
     margin-bottom: 15px;
+}
+.rathinam-grand-fest-2{
+    display: none;
 }
 .rathinam-grand-fest img, .dates img {
     width: 100%; 
@@ -108,9 +118,7 @@ footer{
 } */
 
 
-
-
-/* CELEB CARROUSEL */
+/* ---CELEB CARROUSEL--- */
 .celebs{
     align-self: center;
     margin-top: auto;
@@ -196,7 +204,7 @@ footer{
     left: 44px;
 }
 
-/* GALLERY */
+/* -----------------GALLERY------------------- */
 @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 .banner{
@@ -316,6 +324,9 @@ footer{
         text-align: center;
         padding: 0 30px;
     }
+    .layer3{
+        width: 100vw;
+    }
 }
 @media screen and (max-width: 767px) {
     .banner .slider{
@@ -339,7 +350,7 @@ footer{
         rgba(1, 0, 0, 1.25) 100%
       );
 } */
-/* Extra Styling: */
+/* --Extra Styling:-- */
 .gallery-rgf *{
     margin: 0;
     padding: 0;
@@ -429,11 +440,133 @@ footer{
     transform: translate3d(0, 0, 0) scale(0.95);
     filter: blur(20px);
 }
-/* EVENT CATEGORIES */
+
+
+
+/* ---------------PICK YOUR VIBE------------------ */
+.layer3{
+    background-image: url('https://images.unsplash.com/photo-1594623930572-300a3011d9ae?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGolMjBjb250cm9sbGVyfGVufDB8fDB8fHww');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.layer3::after{
+    content: '';
+    position: absolute;
+    top:0;right: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.5;
+    background-color: #600055a3;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
+.layer3 h1{
+    margin: 0;
+    padding: 0;   
+    
+    
+
+    font-size: 6rem;
+    text-align: center;
+    z-index: 10;
+    line-height: 1em;
+    color: #d5b5de;
+    position: relative;
+}
+.paint-order {
+  paint-order: stroke fill;
+}
+
+@layer demo.support {
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: calc(1rem + min(90px, 15vw));
+    font-weight: 900;
+    letter-spacing: -.175ch;
+    letter-spacing: -.02ch;
+    letter-spacing: 0.5ch;
+
+    line-height: 0.9;
+    color: white;
+    -webkit-text-stroke: 5px #0f0529;
+    text-shadow: 8px 8px #0f0529;
+    
+    /* > span:first-of-type {
+      font-size: .75em;
+    } */
+    
+    /* > div {
+      display: flex;
+      gap: .5ch;
+    } */
+  }
+  .layer3 section {
+    /* min-block-size: 100%; */
+    /* font-family: system-ui, sans-serif; */
+
+    /* display: grid; */
+    place-content: center;
+    /* gap: 15vmin; */
+    
+    /* display: grid; */
+    /* place-items: center; */
+    /* gap: 2vmin; */
+  }
+}
+/* .layer3 h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 4px #860b88;
+    color: transparent;
+} */
+.layer3::after{
+    content: '';
+    position: absolute;
+    top:0;right: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.8;
+    background-color: #000000a5;
+    /* background: linear-gradient(
+        rgba(195, 1, 195, 0.25) 0%,
+        rgba(162, 0, 127, 0.25) 86%,
+        rgba(1, 0, 0, 1.25) 100%
+      ); */
+}
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+.layer3 h1{
+    /* font-family: "Yatra One", serif; */
+  font-weight: 400;
+  font-style: normal;
+}
+.layer3{
+    height: 60vh;
+    width: 60vw;
+    margin: 0 auto;
+    
+}
+.black{
+    /* height: 5rem; */
+}
+/* .parallax-slide > .layer3{
+    height: 60vh;
+} */
+
+
+/* ---------------EVENT CATEGORIES------------------- */
 .categories{
     background-color: #010101;
     height: auto;
-    padding: 30px;
+    padding: 60px;
 }
 
 .event-categories {
@@ -451,6 +584,10 @@ footer{
 @media (max-width: 599px) {
     .event-categories {
         grid-template-columns: repeat(1, 1fr);
+    }
+    h1{
+        letter-spacing: 0.2ch;
+
     }
 }
 
@@ -565,12 +702,15 @@ footer{
 }.category-image#eight{
     background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2024-12/22/full/1734884073-0374.jpg?im=FitAndFill);
 }
-/* PARALLAX EFFECT: */
+
+
+/* ----------------PARALLAX EFFECT:------------------- */
 
 
 .parallax-slide {
 	position: relative;
 	height: 100vh;
+    /* background-color: red; !!! USE THIS FOR DEBUGGING */
 }
 
 .parallax-clip {
@@ -620,28 +760,7 @@ footer{
 	}
 }
 
-.layer3{
-    background-image: url('https://images.unsplash.com/photo-1594623930572-300a3011d9ae?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGolMjBjb250cm9sbGVyfGVufDB8fDB8fHww');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.layer3::after{
-    content: '';
-    position: absolute;
-    top:0;right: 0;
-    height: 100vh;
-    width: 100vw;
-    opacity: 0.5;
-    background-color: #600055a3;
-}
-
-
-.rathinam-grand-fest-2{
-    display: none;
-}
+/* MEDIA QUERY */
 @media (min-width: 1140px) {
     .rathinam-grand-fest{ display: none}
     .landing .main{
@@ -736,48 +855,4 @@ footer{
         -webkit-text-stroke: 8px #860b88;
 
     }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
-.layer3 h1{
-    margin: 0;
-    padding: 0;   
-    
-    
-
-    font-size: 6rem;
-    text-align: center;
-    z-index: 10;
-    line-height: 1em;
-    color: #d5b5de;
-    position: relative;
-}
-/* .layer3 h1::after{
-    position: absolute;
-    inset: 0 0 0 0;
-    content: attr(data-content);
-    z-index: 2;
-    -webkit-text-stroke: 4px #860b88;
-    color: transparent;
-} */
-.layer3::after{
-    content: '';
-    position: absolute;
-    top:0;right: 0;
-    height: 100vh;
-    width: 100vw;
-    opacity: 0.8;
-    background-color: #000000a5;
-    /* background: linear-gradient(
-        rgba(195, 1, 195, 0.25) 0%,
-        rgba(162, 0, 127, 0.25) 86%,
-        rgba(1, 0, 0, 1.25) 100%
-      ); */
-}
-@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
-.layer3 h1{
-    font-family: "Yatra One", serif;
-  font-weight: 400;
-  font-style: normal;
-    
 }
