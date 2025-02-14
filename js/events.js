@@ -18,16 +18,16 @@ function openModal(event) {
 
             if (eventData) {
                 
-                modalHeading.innerHTML = `<h2>${eventData.title}</h2><button data-close-modal>&times;</button>`;
+                modalHeading.innerHTML = `<h2>${eventData.title}</h2><button id = 'btn-close' data-close-modal>&times;</button>`;
 
                 
                 modalContent.innerHTML = `
                     <div class="event-details">
-                        <p><strong>Date:</strong> ${eventData.date}</p>
-                        <p><strong>Description:</strong> ${eventData.description || "No description available."}</p>
+                        <p><strong><span class = 'duration'>◷</span></strong>${eventData.date}</p>
+                        <p><strong></strong> ${eventData.description || "No description available."}</p>
                         <p><strong>Rules:</strong></p>
                         <ul>${eventData.rules.map(rule => `<li>${rule}</li>`).join('')}</ul>
-                        <p><strong>Cost:</strong> ${eventData.cost}</p>
+                        <p><strong>Cost:</strong><span class = 'price'> ${eventData.cost}</span></p>
                         <p><strong>Contact:</strong> ${eventData.contact}</p>
                     </div>
                 `;
