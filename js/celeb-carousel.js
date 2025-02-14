@@ -58,59 +58,90 @@ window.addEventListener("load", () => {
 
   waveTimeline
       .to(".wrapper", {
-          y: 35, // Moves up
-          rotation: 1.5, // Small tilt for a natural effect
-          duration: 1.5, // Faster than before
+          y: 35,
+          rotation: 1.5,
+          duration: 1.5, 
           ease: "sine.inOut"
       })
       .to(".wrapper", {
-          y: -20, // Moves down
-          rotation: -1.5, // Tilts the other way
-          duration: 1.2, // Slightly different timing
+          y: -20,
+          rotation: -1.5, 
+          duration: 1.2,
           ease: "sine.inOut"
       })
       .to(".wrapper", {
-          y: 25, // Moves up again
-          rotation: 1, // Less tilt
-          duration: 1.8, // Slight delay
+          y: 25,
+          rotation: 1, 
+          duration: 1.8, 
           ease: "sine.inOut"
       })
       .to(".wrapper", {
-          y: -15, // Moves down
-          rotation: -0.5, // Barely tilts
-          duration: 1.5, // Natural timing
+          y: -15, 
+          rotation: -0.5, 
+          duration: 1.5,
           ease: "sine.inOut"
       });
 });
 
-  
-// Wave animation for .halo
+
+// Wave animation for #halo
 window.addEventListener("load", () => {
   const waveTimeline = gsap.timeline({ repeat: -1, yoyo: true });
 
   waveTimeline
       .to("#halo", {
-          y: 7, // Moves up
-          // rotation: 1.5, // Small tilt for a natural effect
-          duration: 1.5, // Faster than before
+          y: 7, 
+          // rotation: 1.5, 
+          duration: 1.5, 
           ease: "sine.inOut"
       })
       .to("#halo", {
-          y: -5, // Moves down
-          // rotation: -1.5, // Tilts the other way
-          duration: 1.2, // Slightly different timing
+          y: -5,
+          // rotation: -1.5, 
+          duration: 1.2, 
           ease: "sine.inOut"
       })
       .to("#halo", {
-          y: 5, // Moves up again
-          // rotation: 1, // Less tilt
-          duration: 1.8, // Slight delay
+          y: 5, 
+          // rotation: 1, 
+          duration: 1.8,
           ease: "sine.inOut"
       })
       .to("#halo", {
-          y: -9, // Moves down
-          // rotation: -0.5, // Barely tilts
-          duration: 1.5, // Natural timing
+          y: -9, 
+          // rotation: -0.5,
+          duration: 1.5, 
           ease: "sine.inOut"
-      });
+    });
+});
+
+// Wave animation for #halo
+window.addEventListener("load", () => {
+  const waveTimeline = gsap.timeline({ repeat: -1, yoyo: true });
+
+  waveTimeline
+      .to("#orb", {
+        y: 7, 
+        // rotation: 1.5,
+        duration: 1.0, 
+        ease: "sine.inOut"
+      })
+      .to("#orb", {
+        y: -5,
+        // rotation: -1.5, 
+        duration: 1.3, 
+        ease: "sine.inOut"
+      })
+      .to("#orb", {
+        y: 4.5,
+        // rotation: 1, 
+        duration: 1.2, 
+        ease: "sine.inOut"
+      })
+      .to("#orb", {
+        y: -7, 
+        // rotation: -0.5, 
+        duration: 1.2, 
+        ease: "sine.inOut"
+    });
 });

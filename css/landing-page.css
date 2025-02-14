@@ -1,10 +1,3 @@
-
-/* 
-@media for 599px:
-.celebs: 
-    right: 12%;
-    left: 12%; */
-
 /* ------------------LANDING PAGE-------------------- */
 .register-now{
     position: absolute;
@@ -74,8 +67,8 @@ footer{
 }
 .rathinam-grand-fest img, .dates img {
     width: 100%; 
-    max-width: 300px; /* Limit maximum size */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* limit max size */
+    height: auto; /* maintain aspect ratio */
 }
 
 #rathinam {
@@ -171,7 +164,7 @@ footer{
 
 .strip {
     width: 400px;
-    height: 20px; /* Adjusted height */
+    height: 20px; /* adjusting height */
     background-size: 400px 400px;
     background-repeat: no-repeat;
     backface-visibility: visible;
@@ -179,7 +172,7 @@ footer{
 }
 
 :root {
-    --carousel-size: 200px; /* Change this to resize the whole thing */
+    --carousel-size: 200px; /* variable to resize carousel */
 }
 
 .container {
@@ -387,17 +380,16 @@ footer{
     background-color: #0f0529;
     position: relative;
     width: 100%;  
-    height: 100vh; /* Restrict animation to this section only */
-    overflow: hidden; /* Prevents spillover */
+    height: 100vh;
+    overflow: hidden; 
 }
 
 .gallery-rgf svg {
-    position: absolute; /* Keeps it in place without affecting layout */
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height of the section */
-     /* Sends it behind other elements */
+    width: 100%;
+    height: 100%; /* full height of the section */
     pointer-events: none; /* Prevents it from interfering with clicks */
 }
 
@@ -468,8 +460,6 @@ footer{
 .layer3 h1{
     margin: 0;
     padding: 0;   
-    
-    
 
     font-size: 6rem;
     text-align: center;
@@ -781,7 +771,8 @@ a{
 	background-size: cover;
 	background-position: center top;
 	background-attachment: fixed;
-	/* -webkit-transform: translateZ(0); /* necessary for iOS! */
+	-webkit-transform: translateZ(0); 
+    /* necessary for iOS */
 }
 
 
@@ -806,7 +797,7 @@ a{
 	.fixed-parallax {
 		position: fixed;
 		background-attachment: unset;
-		-webkit-transform: translateZ(0); /* necessary for iOS! */
+		-webkit-transform: translateZ(0); /* necessary for iOS */
 	}
 }
 
@@ -870,12 +861,19 @@ a{
         justify-self: center;
         align-self: center;
         position: relative;
-
+        height: 550px;
         /* height: 550px;
         border: 1px white solid; */
     }
     .rgf-halo #halo{
-        width: 1000px;
+        width: 970px;
+        position: absolute; 
+        top: -4.5%;
+        left: 3%;
+        /* transfo7rm: translateX(-50%); Centers the image */
+        /* align-items: center; */
+        transform: rotate(-3deg);
+        z-index: 0;
     }
     .dates{
         margin-top: -15px;
@@ -885,6 +883,7 @@ a{
         position: absolute;
         top: 130px;
         left: 270px;
+        z-index: 1;
     }
     .rgf-container #orb{
         position: absolute;
@@ -905,4 +904,14 @@ a{
         -webkit-text-stroke: 8px #860b88;
 
     }
+
+    /* TESTING */
+    .rgf-container {
+        /* display: block; */
+        /* z-index: 4; */
+        /* width: 1000px; */
+        height: 550px; /* Fix the height so elements inside don’t affect layout */
+        /* position: relative; */
+    }
+
 }
