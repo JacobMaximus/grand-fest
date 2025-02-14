@@ -187,7 +187,7 @@ footer{
 
 .strip {
     width: var(--carousel-size);
-    height: calc(var(--carousel-size) / 20); /* Divides image properly */
+    height: calc(var(--carousel-size) / 20); 
     background-size: var(--carousel-size) var(--carousel-size);
 }
 
@@ -771,13 +771,8 @@ a{
 	background-size: cover;
 	background-position: center top;
 	background-attachment: fixed;
-	/* -webkit-transform: translateZ(0); */
-    /* necessary for iOS */
 }
 
-
-/* used only as overlay for the images,
-   darkens it a little in this case */
 .fixed-parallax:before {
 	position: absolute;
 	width: 100%;
@@ -788,8 +783,7 @@ a{
 	content: "";
 }
 
-
-/* CSS specific to iOS devices */ 
+ 
 @supports (-webkit-overflow-scrolling: touch) {
 	.parallax-clip {
 		clip: rect(auto, auto, auto, auto);
@@ -797,8 +791,6 @@ a{
 	.fixed-parallax {
 		position: fixed;
 		background-attachment: unset;
-		/* -webkit-transform: translateZ(0);  */
-        /* necessary for iOS */
 	}
 }
 
@@ -863,16 +855,12 @@ a{
         align-self: center;
         position: relative;
         height: 550px;
-        /* height: 550px;
-        border: 1px white solid; */
     }
     .rgf-halo #halo{
         width: 970px;
         position: absolute; 
         top: -4.5%;
         left: 3%;
-        /* transfo7rm: translateX(-50%); Centers the image */
-        /* align-items: center; */
         transform: rotate(-3deg);
         z-index: 0;
     }
@@ -905,14 +893,7 @@ a{
         -webkit-text-stroke: 8px #860b88;
 
     }
-
-    /* TESTING */
     .rgf-container {
-        /* display: block; */
-        /* z-index: 4; */
-        /* width: 1000px; */
-        height: 550px; /* Fix the height so elements inside don’t affect layout */
-        /* position: relative; */
+        height: 550px; 
     }
-
 }

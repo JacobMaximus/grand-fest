@@ -4,13 +4,11 @@ function loadSVG() {
     .then(svg => {
         document.getElementById('rgf').innerHTML = svg;
 
-        // Wait for the SVG to be added before running animations
-        // animateSVG();
-        // animateSVG2();
         animateSVG3();
     })
     .catch(error => console.error("Error loading SVG:", error));
 }
+
 function animateSVG3(){
     const waveTimeline = gsap.timeline({ repeat: -1, yoyo: true });
 

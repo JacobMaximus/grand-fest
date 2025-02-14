@@ -50,7 +50,3 @@ function openModal(event) {
 eventDivs.forEach(div => {
     div.addEventListener('click', openModal);
 });
-
-// document.querySelectorAll("img.random-img").forEach(img => {
-//     img.src = `https://picsum.photos/270/250?random=${Math.random()}`;
-// });

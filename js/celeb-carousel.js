@@ -10,138 +10,129 @@ const images = [
   ];
   
   const wrapper = document.querySelector(".wrapper");
-  const numStrips = 20; // Number of strips to cover the full image
-  
-  // Clear existing content & generate strips dynamically
+  const numStrips = 20; 
+
   wrapper.innerHTML = "";
   for (let i = 0; i < numStrips; i++) {
     const strip = document.createElement("div");
     strip.classList.add("strip");
-    strip.style.height = `${400 / numStrips}px`; // Ensure correct slicing
-    strip.style.backgroundPosition = `0px -${(400 / numStrips) * i}px`; // Align slices
-    strip.style.animationDelay = `${i * 0.1}s`; // Stagger animation for wave effect
+    strip.style.height = `${400 / numStrips}px`; 
+    strip.style.backgroundPosition = `0px -${(400 / numStrips) * i}px`; 
+    strip.style.animationDelay = `${i * 0.1}s`; 
     wrapper.appendChild(strip);
   }
   
-  // Select all strips after they are created
   const imageStrips = document.querySelectorAll(".wrapper div");
   
-  // **Show First Image Immediately**
   imageStrips.forEach((strip, i) => {
-    strip.style.backgroundImage = `url(${images[0]})`; // Set first image manually
+    strip.style.backgroundImage = `url(${images[0]})`; 
     strip.style.backgroundPosition = `0px -${(400 / numStrips) * i}px`;
     strip.setAttribute("data-index", 0);
   });
   
-  // Function to update images after each spin
   function updateImages() {
     let currentIndex = parseInt(imageStrips[0].getAttribute("data-index") || 0);
     let nextIndex = (currentIndex + 1) % images.length;
   
     imageStrips.forEach((strip, i) => {
       strip.style.backgroundImage = `url(${images[nextIndex]})`;
-      strip.style.backgroundPosition = `0px -${(400 / numStrips) * i}px`; // Keep image aligned
+      strip.style.backgroundPosition = `0px -${(400 / numStrips) * i}px`; 
       strip.setAttribute("data-index", nextIndex);
     });
   
-    setTimeout(updateImages, 8595); // Run every 20s (full spin cycle)
+    setTimeout(updateImages, 8595); 
   }
-  
-  // Start Image Update Loop
-//   setTimeout(updateImages, 20000);
-setTimeout(updateImages, 8595); // Runs every 10s (twice as fast)
+
+setTimeout(updateImages, 8595); 
 
 
-// Wave animation for celeb-carrousel
 window.addEventListener("load", () => {
-  const waveTimeline = gsap.timeline({ repeat: -1, yoyo: true });
 
-  waveTimeline
-      .to(".wrapper", {
-          y: 35,
-          rotation: 1.5,
-          duration: 1.5, 
-          ease: "sine.inOut"
-      })
-      .to(".wrapper", {
-          y: -20,
-          rotation: -1.5, 
-          duration: 1.2,
-          ease: "sine.inOut"
-      })
-      .to(".wrapper", {
-          y: 25,
-          rotation: 1, 
-          duration: 1.8, 
-          ease: "sine.inOut"
-      })
-      .to(".wrapper", {
-          y: -15, 
-          rotation: -0.5, 
-          duration: 1.5,
-          ease: "sine.inOut"
-      });
-});
+	// Wave animation for celeb-carrousel
+	const waveTimeline = gsap.timeline({ repeat: -1, yoyo: true });
 
+	waveTimeline
+		.to(".wrapper", {
+			y: 35,
+			rotation: 1.5,
+			duration: 1.5, 
+			ease: "sine.inOut"
+		})
+		.to(".wrapper", {
+			y: -20,
+			rotation: -1.5, 
+			duration: 1.2,
+			ease: "sine.inOut"
+		})
+		.to(".wrapper", {
+			y: 25,
+			rotation: 1, 
+			duration: 1.8, 
+			ease: "sine.inOut"
+		})
+		.to(".wrapper", {
+			y: -15, 
+			rotation: -0.5, 
+			duration: 1.5,
+			ease: "sine.inOut"
+		});
 
-// Wave animation for #halo
-window.addEventListener("load", () => {
-  const waveTimeline = gsap.timeline({ repeat: -1, yoyo: true });
+	// animation for #halo
+	const waveTimeline2 = gsap.timeline({ repeat: -1, yoyo: true });
 
-  waveTimeline
-      .to("#halo", {
-          y: 7, 
-          // rotation: 1.5, 
-          duration: 1.5, 
-          ease: "sine.inOut"
-      })
-      .to("#halo", {
-          y: -5,
-          // rotation: -1.5, 
-          duration: 1.2, 
-          ease: "sine.inOut"
-      })
-      .to("#halo", {
-          y: 5, 
-          // rotation: 1, 
-          duration: 1.8,
-          ease: "sine.inOut"
-      })
-      .to("#halo", {
-          y: -9, 
-          // rotation: -0.5,
-          duration: 1.5, 
-          ease: "sine.inOut"
-    });
-});
+	waveTimeline2
+		.to("#halo", {
+			y: 7, 
+			// rotation: 1.5, 
+			duration: 1.5, 
+			ease: "sine.inOut"
+		})
+		.to("#halo", {
+			y: -5,
+			// rotation: -1.5, 
+			duration: 1.2, 
+			ease: "sine.inOut"
+		})
+		.to("#halo", {
+			y: 5, 
+			// rotation: 1, 
+			duration: 1.8,
+			ease: "sine.inOut"
+		})
+		.to("#halo", {
+			y: -9, 
+			// rotation: -0.5,
+			duration: 1.5, 
+			ease: "sine.inOut"
+		});
 
-// Wave animation for #halo
-window.addEventListener("load", () => {
-  const waveTimeline = gsap.timeline({ repeat: -1, yoyo: true });
+	// animation for #orb
+	const waveTimeline3 = gsap.timeline({ repeat: -1, yoyo: true });
+		
+		waveTimeline
+			.to("#orb", {
+				y: 7, 
+				// rotation: 1.5,
+				duration: 1.0, 
+				ease: "sine.inOut"
+			})
+			.to("#orb", {
+				y: -5,
+				// rotation: -1.5, 
+				duration: 1.3, 
+				ease: "sine.inOut"
+			})
+			.to("#orb", {
+				y: 4.5,
+				// rotation: 1, 
+				duration: 1.2, 
+				ease: "sine.inOut"
+			})
+			.to("#orb", {
+				y: -7, 
+				// rotation: -0.5, 
+				duration: 1.2, 
+				ease: "sine.inOut"
+			});
 
-  waveTimeline
-      .to("#orb", {
-        y: 7, 
-        // rotation: 1.5,
-        duration: 1.0, 
-        ease: "sine.inOut"
-      })
-      .to("#orb", {
-        y: -5,
-        // rotation: -1.5, 
-        duration: 1.3, 
-        ease: "sine.inOut"
-      })
-      .to("#orb", {
-        y: 4.5,
-        // rotation: 1, 
-        duration: 1.2, 
-        ease: "sine.inOut"
-      })
-      .to("#orb", {
-        y: -7, 
-        // rotation: -0.5, 
-        duration: 1.2, 
-        ease: "sine.inOut"
-    });
 });
