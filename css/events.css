@@ -180,6 +180,9 @@ button.register{
 } */
 
 @media (max-width: 599px) {
+  .events-container section{
+    margin-bottom: -50px;
+  }
   h1{
     letter-spacing: -.1ch;
     font-size: 4rem;

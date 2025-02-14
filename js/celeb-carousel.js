@@ -1,12 +1,14 @@
 // Strips-spinning animtation for celeb-carousel
 const images = [
-    "https://rathinamfest.com/assets/images/01.png",
-    "https://rathinamfest.com/assets/images/02.png",
-    "https://rathinamfest.com/assets/images/03.png",
-    "https://rathinamfest.com/assets/images/04.png",
-    "https://rathinamfest.com/assets/images/05.png",
-    "https://rathinamfest.com/assets/images/06.png",
-    "https://rathinamfest.com/assets/images/07.png"
+    "/images/placeholders/01.png",
+    "/images/placeholders/02.png",
+    "/images/placeholders/03.png",
+    "/images/placeholders/04.png",
+    "/images/placeholders/05.png",
+    "/images/placeholders/06.png",
+    "/images/placeholders/07.png",
+    "/images/placeholders/08.png",
+    "/images/placeholders/09.png",
   ];
   
   const wrapper = document.querySelector(".wrapper");
@@ -77,62 +79,5 @@ window.addEventListener("load", () => {
 			ease: "sine.inOut"
 		});
 
-	// animation for #halo
-	const waveTimeline2 = gsap.timeline({ repeat: -1, yoyo: true });
-
-	waveTimeline2
-		.to("#halo", {
-			y: 7, 
-			// rotation: 1.5, 
-			duration: 1.5, 
-			ease: "sine.inOut"
-		})
-		.to("#halo", {
-			y: -5,
-			// rotation: -1.5, 
-			duration: 1.2, 
-			ease: "sine.inOut"
-		})
-		.to("#halo", {
-			y: 5, 
-			// rotation: 1, 
-			duration: 1.8,
-			ease: "sine.inOut"
-		})
-		.to("#halo", {
-			y: -9, 
-			// rotation: -0.5,
-			duration: 1.5, 
-			ease: "sine.inOut"
-		});
-
-	// animation for #orb
-	const waveTimeline3 = gsap.timeline({ repeat: -1, yoyo: true });
-		
-		waveTimeline
-			.to("#orb", {
-				y: 7, 
-				// rotation: 1.5,
-				duration: 1.0, 
-				ease: "sine.inOut"
-			})
-			.to("#orb", {
-				y: -5,
-				// rotation: -1.5, 
-				duration: 1.3, 
-				ease: "sine.inOut"
-			})
-			.to("#orb", {
-				y: 4.5,
-				// rotation: 1, 
-				duration: 1.2, 
-				ease: "sine.inOut"
-			})
-			.to("#orb", {
-				y: -7, 
-				// rotation: -0.5, 
-				duration: 1.2, 
-				ease: "sine.inOut"
-			});
-
+	
 });
