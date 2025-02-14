@@ -14,10 +14,11 @@
 }
 
 footer{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     text-align: center;
-    padding: 20px;
+    margin-top: 50px;
+    padding: 40px;
 }
 .landing{
     height: 100svh;
@@ -445,7 +446,7 @@ footer{
 
 /* ---------------PICK YOUR VIBE------------------ */
 .layer3{
-    background-image: url('https://images.unsplash.com/photo-1594623930572-300a3011d9ae?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGolMjBjb250cm9sbGVyfGVufDB8fDB8fHww');
+    background-image: url('/images/pick-your-vibe.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -567,7 +568,7 @@ footer{
 .categories{
     background-color: #010101;
     height: auto;
-    padding: 60px;
+    /* padding: 60px; */
 }
 
 .event-categories {
@@ -579,12 +580,18 @@ footer{
     justify-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 110px;
 }
 
 /* Mobile: 1 card per row */
 @media (max-width: 599px) {
+    a{
+        transform: scale(1.2);
+    }
     .event-categories {
         grid-template-columns: repeat(1, 1fr);
+        gap: 100px;
+        align-items: center;
     }
     h1{
         letter-spacing: 0.2ch;
@@ -596,16 +603,22 @@ footer{
 }
 
 /* Tablet: 2 cards per row */
-@media (min-width: 600px) and (max-width: 899px) {
+@media (min-width: 600px) and (max-width: 1167px) {
     .event-categories {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Desktop: 4 cards per row */
-@media (min-width: 900px) {
+@media (min-width: 1168px) {
+    a{
+        transform: scale(1.2);
+    }
     .event-categories {
         grid-template-columns: repeat(4, 1fr);
+        gap: 110px;
+        align-items: center;
+        /* margin-left: calc(auto - 500px); */
     }
 }
 
@@ -626,8 +639,12 @@ footer{
     border-radius: 8px;
     cursor: pointer;
     color: white;
-}
 
+    letter-spacing: 0.1rem;
+}
+a{
+    /* transform: scale(1.2); */
+}
 .card::before {
     content: '';
     position: absolute;
@@ -661,11 +678,20 @@ footer{
 
 .card p:not(.heading) {
     font-size: 14px;
+    letter-spacing: 0.05rem;
+    font-family: serif;
 }
 
 .card p:last-child {
     color: #e81cff;
     font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+.card span{
+    color: rgb(104, 104, 104);
+    display: block;
+    margin-bottom: -13px;
+    
 }
 
 .card:hover::after {
@@ -681,8 +707,8 @@ footer{
 }
 
 .categories .category-image{
-    background-color: red;
-    height: 124px;
+    background-color: rgb(0, 0, 0);
+    height: 139px;
     border-radius: 10px;
     background-size: cover;
     background-repeat: no-repeat;
