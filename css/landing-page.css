@@ -771,7 +771,7 @@ a{
 	background-size: cover;
 	background-position: center top;
 	background-attachment: fixed;
-	-webkit-transform: translateZ(0); 
+	/* -webkit-transform: translateZ(0); */
     /* necessary for iOS */
 }
 
@@ -797,7 +797,8 @@ a{
 	.fixed-parallax {
 		position: fixed;
 		background-attachment: unset;
-		-webkit-transform: translateZ(0); /* necessary for iOS */
+		/* -webkit-transform: translateZ(0);  */
+        /* necessary for iOS */
 	}
 }
 
