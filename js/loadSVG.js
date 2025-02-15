@@ -74,7 +74,7 @@ window.addEventListener('load', () =>{
 	// animation for #orb
 	const waveTimeline3 = gsap.timeline({ repeat: -1, yoyo: true });
 		
-		waveTimeline
+		waveTimeline3
 			.to("#orb", {
 				y: 7, 
 				// rotation: 1.5,

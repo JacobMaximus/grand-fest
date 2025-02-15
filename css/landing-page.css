@@ -18,7 +18,7 @@ footer{
     width: 100vw;
 }
 .landing{
-    background-image: url('/images/BG.png');
+    background-image: url('/images/BG.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -732,18 +732,6 @@ a{
     width: 260px;
     height: 324px;
 } */
-/* mobile: */
-@media (max-width: 599px) {
-    
-}
-/* tablet: */
-@media (min-width: 600px) and (max-width: 899px) {
-    
-}
-/* desktop: */
-@media (min-width: 900px) {
-    
-}
 /* ----------------PARALLAX EFFECT:------------------- */
 
 
@@ -862,6 +850,9 @@ a{
         top: -4.5%;
         left: 3%;
         transform: rotate(-3deg);
+
+        top: -8.9%;
+        transform: rotate(-4deg);
         z-index: 0;
     }
     .dates{
