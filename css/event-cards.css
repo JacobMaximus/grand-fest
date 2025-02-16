@@ -1,0 +1,109 @@
+.container {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #eee;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.activity {
+  flex: 0 0 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  max-width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.1333333333);
+  background-color: #282c34;
+  background: linear-gradient(0deg, rgb(40, 44, 52) 0%, rgba(17, 0, 32, 0.5) 100%);
+  box-shadow: 0 7px 20px 5px rgba(0, 0, 0, 0.5333333333);
+  border-radius: 0.7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: 0.5s all;
+}
+.activity h2 {
+  margin-bottom: 2px;
+}
+.activity ins {
+  text-decoration: none;
+}
+.activity .main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 1rem;
+}
+.activity .main .activityImage {
+  border-radius: 0.5rem;
+  max-width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.activity .main .activityInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.activity .main .activityInfo .price {
+  display: flex;
+  align-items: center;
+  color: #ee83e5;
+  font-weight: 700;
+}
+.activity .main .activityInfo .price ins {
+  margin-left: -0.3rem;
+  margin-right: 0.5rem;
+}
+.activity .main .activityInfo .duration {
+  display: flex;
+  align-items: center;
+  color: #a89ec9;
+  margin-right: 0.2rem;
+}
+.activity .main .activityInfo .duration ins {
+  margin: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.activity ::before {
+  position: fixed;
+  content: "";
+  box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.031372549);
+  top: -10%;
+  left: -100%;
+  transform: rotate(-45deg);
+  height: 60rem;
+  transition: 0.7s all;
+}
+.activity:hover {
+  border: 1px solid rgba(255, 255, 255, 0.2666666667);
+  box-shadow: 0 7px 50px 10px rgba(0, 0, 0, 0.6666666667);
+  transform: scale(1.015);
+  filter: brightness(1.3);
+}
+.activity:hover ::before {
+  filter: brightness(0.5);
+  top: -100%;
+  left: 200%;
+}
+
+@media screen and (max-width: 768px) {
+  .activity {
+    transform: scale(0.9);
+    margin-bottom: -3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .activity {
+    transform: scale(0.8);
+    margin-bottom: -5.8rem;
+  }
+}

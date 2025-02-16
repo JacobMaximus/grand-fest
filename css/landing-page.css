@@ -1,17 +1,24 @@
+/* ------------------LANDING PAGE-------------------- */
+.register-now{
+    position: absolute;
+    right: 6%;
+    top: 4%;
+    margin: 0;
+}
 
-/* 
-@media for 599px:
-.celebs: 
-    right: 12%;
-    left: 12%; */
-
-/* LANDING PAGE */
+footer{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+}
 .landing{
     height: 100svh;
     width: 100vw;
 }
 .landing{
-    background-image: url('/images/BG.png');
+    background-image: url('/images/BG.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -24,9 +31,21 @@
     top:0;right: 0;
     height: 100vh;
     width: 100vw;
-    opacity: 0.5;
-    background-color: #000000a3;
+    opacity: 0.8;
+    background-color: #000000a5;
+    /* background: linear-gradient(
+        rgba(195, 1, 195, 0.25) 0%,
+        rgba(162, 0, 127, 0.25) 86%,
+        rgba(1, 0, 0, 1.25) 100%
+      ); */
+
+    /* background: linear-gradient(
+    rgba(57, 0, 57, 0.25) 0%,
+    rgba(63, 0, 50, 0.25) 86%,
+    rgba(1, 0, 0, 1.25) 100%
+    ); */
 }
+
 .rgf-container{
     display: none;
 }
@@ -43,10 +62,13 @@
 .rathinam-grand-fest{
     margin-bottom: 15px;
 }
+.rathinam-grand-fest-2{
+    display: none;
+}
 .rathinam-grand-fest img, .dates img {
     width: 100%; 
-    max-width: 300px; /* Limit maximum size */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* limit max size */
+    height: auto; /* maintain aspect ratio */
 }
 
 #rathinam {
@@ -81,15 +103,16 @@
     position: relative;
     top: -13%;
 }
+/* .gradient{
+    background: linear-gradient(
+    rgba(205, 105, 252, 0.25) 0%,
+    rgba(71, 47, 255, 0.25) 86%,
+    rgba(1, 0, 0, 0.25) 100%
+  );
+} */
 
-.register-now{
-    position: absolute;
-    right: 6%;
-    top: 4%;
-    margin: 0;
-}
 
-/* CELEB CARROUSEL */
+/* ---CELEB CARROUSEL--- */
 .celebs{
     align-self: center;
     margin-top: auto;
@@ -141,7 +164,7 @@
 
 .strip {
     width: 400px;
-    height: 20px; /* Adjusted height */
+    height: 20px; /* adjusting height */
     background-size: 400px 400px;
     background-repeat: no-repeat;
     backface-visibility: visible;
@@ -149,7 +172,7 @@
 }
 
 :root {
-    --carousel-size: 200px; /* Change this to resize the whole thing */
+    --carousel-size: 200px; /* variable to resize carousel */
 }
 
 .container {
@@ -164,7 +187,7 @@
 
 .strip {
     width: var(--carousel-size);
-    height: calc(var(--carousel-size) / 20); /* Divides image properly */
+    height: calc(var(--carousel-size) / 20); 
     background-size: var(--carousel-size) var(--carousel-size);
 }
 
@@ -175,7 +198,7 @@
     left: 44px;
 }
 
-/* GALLERY */
+/* -----------------GALLERY------------------- */
 @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 .banner{
@@ -189,7 +212,7 @@
     position: absolute;
     width: 200px;
     height: 250px;
-    top: 10%;
+    top: 15%;
     left: calc(50% - 100px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
@@ -234,7 +257,7 @@
     font-family: 'ICA Rubrik';
     font-size: 16em;
     line-height: 1em;
-    color: #25283B;
+    color: #d5b5de;
     position: relative;
 }
 .banner .content h1::after{
@@ -242,7 +265,7 @@
     inset: 0 0 0 0;
     content: attr(data-content);
     z-index: 2;
-    -webkit-text-stroke: 2px #d2d2d2;
+    -webkit-text-stroke: 5px #2a1454;
     color: transparent;
 }
 .banner .content .author{
@@ -266,6 +289,9 @@
     z-index: 1;
 }
 @media screen and (max-width: 1023px) {
+    .banner{
+        height: 90vh;
+    }
     .banner .slider{
         width: 160px;
         height: 200px;
@@ -292,6 +318,9 @@
         text-align: center;
         padding: 0 30px;
     }
+    .layer3{
+        width: 100vw;
+    }
 }
 @media screen and (max-width: 767px) {
     .banner .slider{
@@ -308,28 +337,75 @@
         font-size: 5em;
     }
 }
-
-/* Extra Styling: */
+/* .banner{
+    background: linear-gradient(
+        rgba(195, 1, 195, 0.25) 0%,
+        rgba(162, 0, 127, 0.25) 86%,
+        rgba(1, 0, 0, 1.25) 100%
+      );
+} */
+/* --Extra Styling:-- */
 .gallery-rgf *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 .gallery-rgf{
-    background-color: #292727;
-    background-image:
+    background-color: #00000061;
+    /* background-image:
             repeating-linear-gradient(
             to right, transparent 0 100px,
-            #c0c0c022 100px 101px
+            #7e727e 100px 101px
             ),
 
             repeating-linear-gradient(
             to bottom, transparent 0 100px,
-            #b5b5b522 100px 101px
+            #7e727e 100px 101px
             );
+            --s: 60px; 
+    
+    --c:#1C2130 0 25%,#0000 0;
+    --p:0 0/calc(3*var(--s)) calc(2*var(--s));
+    background:
+      conic-gradient(from -45deg at 75% 62.5%,var(--c)) var(--p),
+      conic-gradient(from 135deg at 25% 37.5%,var(--c)) var(--p),
+      repeating-conic-gradient(from 90deg,var(--c),#10061f 0 50%)
+       0 0/var(--s) var(--s); */
+    /* background-image: url(/images/events-page.png); */
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gallery-rgf {
+    background-color: #0f0529;
+    position: relative;
+    width: 100%;  
+    height: 100vh;
+    overflow: hidden; 
 }
 
-.gallery-rgf::before{
+.gallery-rgf svg {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* full height of the section */
+    pointer-events: none; /* Prevents it from interfering with clicks */
+}
+
+
+.gallery-rgf::after{
+    content: '';
+    position: absolute;
+    top:0;right: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.8;
+    background-color: #000000a5;
+}
+
+
+/* .gallery-rgf::before{
     position: absolute;
     width: min(1400px, 90vw);
     top: 10%;
@@ -337,22 +413,152 @@
     height: 90%;
     transform: translateX(-50%);
     content: '';
-    /* background-image: url(images/bg.png); */
+    background-image: url(images/bg.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top center;
     pointer-events: none;
-}
+} */
   
 .item img{
     border: 1px white solid;
     border-radius: 10px;
 }
-/* EVENT CATEGORIES */
+.item::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+
+
+/* ---------------PICK YOUR VIBE------------------ */
+.layer3{
+    background-image: url('/images/pick-your-vibe.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.layer3::after{
+    content: '';
+    position: absolute;
+    top:0;right: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.5;
+    background-color: #600055a3;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
+.layer3 h1{
+    margin: 0;
+    padding: 0;   
+
+    font-size: 6rem;
+    text-align: center;
+    z-index: 10;
+    line-height: 1em;
+    color: #d5b5de;
+    position: relative;
+}
+.paint-order {
+  paint-order: stroke fill;
+}
+
+@layer demo.support {
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: calc(1rem + min(90px, 15vw));
+    font-weight: 900;
+    letter-spacing: -.175ch;
+    letter-spacing: -.02ch;
+    letter-spacing: 0.5ch;
+
+    line-height: 0.9;
+    color: white;
+    -webkit-text-stroke: 5px #0f0529;
+    text-shadow: 8px 8px #0f0529;
+    
+    /* > span:first-of-type {
+      font-size: .75em;
+    } */
+    
+    /* > div {
+      display: flex;
+      gap: .5ch;
+    } */
+  }
+  .layer3 section, .events-container section {
+    /* min-block-size: 100%; */
+    /* font-family: system-ui, sans-serif; */
+
+    /* display: grid; */
+    place-content: center;
+    /* gap: 15vmin; */
+    
+    /* display: grid; */
+    /* place-items: center; */
+    /* gap: 2vmin; */
+  }
+}
+/* .layer3 h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 4px #860b88;
+    color: transparent;
+} */
+.layer3::after{
+    content: '';
+    position: absolute;
+    top:0;right: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.8;
+    background-color: #000000a5;
+    /* background: linear-gradient(
+        rgba(195, 1, 195, 0.25) 0%,
+        rgba(162, 0, 127, 0.25) 86%,
+        rgba(1, 0, 0, 1.25) 100%
+      ); */
+}
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+.layer3 h1{
+    /* font-family: "Yatra One", serif; */
+  font-weight: 400;
+  font-style: normal;
+}
+.layer3.fixed-parallax{
+    height: 60vh;
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 13rem;
+}
+.black{
+    /* height: 5rem; */
+    /* background-color: red; */
+}
+/* .parallax-slide > .layer3{
+    height: 60vh;
+} */
+
+
+/* ---------------EVENT CATEGORIES------------------- */
 .categories{
-    background-color: black;
+    background-color: #010101;
     height: auto;
-    padding: 30px;
+    /* padding: 60px; */
 }
 
 .event-categories {
@@ -364,26 +570,45 @@
     justify-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 110px;
 }
 
 /* Mobile: 1 card per row */
 @media (max-width: 599px) {
+    a{
+        transform: scale(1.2);
+    }
     .event-categories {
         grid-template-columns: repeat(1, 1fr);
+        gap: 100px;
+        align-items: center;
+    }
+    h1{
+        letter-spacing: 0.2ch;
+    }
+    .layer3.fixed-parallax{
+        width: 100vw;
+        height: 70vh;
     }
 }
 
 /* Tablet: 2 cards per row */
-@media (min-width: 600px) and (max-width: 899px) {
+@media (min-width: 600px) and (max-width: 1167px) {
     .event-categories {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Desktop: 4 cards per row */
-@media (min-width: 900px) {
+@media (min-width: 1168px) {
+    a{
+        transform: scale(1.2);
+    }
     .event-categories {
         grid-template-columns: repeat(4, 1fr);
+        gap: 110px;
+        align-items: center;
+        /* margin-left: calc(auto - 500px); */
     }
 }
 
@@ -404,8 +629,12 @@
     border-radius: 8px;
     cursor: pointer;
     color: white;
-}
 
+    letter-spacing: 0.1rem;
+}
+a{
+    /* transform: scale(1.2); */
+}
 .card::before {
     content: '';
     position: absolute;
@@ -439,11 +668,20 @@
 
 .card p:not(.heading) {
     font-size: 14px;
+    letter-spacing: 0.05rem;
+    font-family: serif;
 }
 
 .card p:last-child {
     color: #e81cff;
     font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+.card span{
+    color: rgb(104, 104, 104);
+    display: block;
+    margin-bottom: -13px;
+    
 }
 
 .card:hover::after {
@@ -458,12 +696,49 @@
     margin: 10px 0;
 }
 
-/* PARALLAX EFFECT: */
+.categories .category-image{
+    background-color: rgb(0, 0, 0);
+    height: 139px;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.category-image#one{
+    background-image: url(https://www.igdleaders.org/wp-content/uploads/2020/09/fifaeworldcupmain-20180904023118835.jpg);
+}
+.category-image#two{
+    background-image: url(https://hpro-web-assets.s3.amazonaws.com/insights/uploads/2020/08/HARMAN_Esports-Arena_horiz.jpg);
+}.category-image#three{
+    background-image: url(https://i.pinimg.com/236x/c7/8a/1a/c78a1a65fd707b1832c459376545f8c3.jpg);
+}.category-image#four{
+    background-image: url(https://www.visionvivaah.com/blog/wp-content/uploads/2019/12/Event-organizer-for-cultural-shows.jpg);
+}.category-image#five{
+    background-image: url(https://images.stockcake.com/public/5/b/a/5ba0f7f2-e725-492f-83c4-9e418b38beeb_large/electronics-workshop-glow-stockcake.jpg);
+}.category-image#six{
+    background-image: url(https://i.pinimg.com/originals/75/48/71/7548712e96072ae4dc82dc5e4c40a15e.jpg);
+}.category-image#seven{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH4zDgcxZ5L-M0mCAwHDDUZhYhho4XjI5iCA&s);
+}.category-image#eight{
+    background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2024-12/22/full/1734884073-0374.jpg?im=FitAndFill);
+}
+
+/* TEST GROUND: */
+/* .card{
+    width: 250px;
+    height: 314px;
+}
+.card::before{
+    width: 260px;
+    height: 324px;
+} */
+/* ----------------PARALLAX EFFECT:------------------- */
 
 
 .parallax-slide {
 	position: relative;
 	height: 100vh;
+    /* background-color: red; !!! USE THIS FOR DEBUGGING */
 }
 
 .parallax-clip {
@@ -484,12 +759,8 @@
 	background-size: cover;
 	background-position: center top;
 	background-attachment: fixed;
-	/* -webkit-transform: translateZ(0); /* necessary for iOS! */
 }
 
-
-/* used only as overlay for the images,
-   darkens it a little in this case */
 .fixed-parallax:before {
 	position: absolute;
 	width: 100%;
@@ -500,8 +771,7 @@
 	content: "";
 }
 
-
-/* CSS specific to iOS devices */ 
+ 
 @supports (-webkit-overflow-scrolling: touch) {
 	.parallax-clip {
 		clip: rect(auto, auto, auto, auto);
@@ -509,35 +779,10 @@
 	.fixed-parallax {
 		position: fixed;
 		background-attachment: unset;
-		-webkit-transform: translateZ(0); /* necessary for iOS! */
 	}
 }
 
-.layer3{
-    background-image: url('https://c0.wallpaperflare.com/preview/691/271/762/audience-band-celebration-concert.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.layer3::after{
-    content: '';
-    position: absolute;
-    top:0;right: 0;
-    height: 100vh;
-    width: 100vw;
-    opacity: 0.5;
-    background-color: #600055a3;
-}
-.layer3 h1{
-    margin: 0;
-    padding: 0;   
-}
-
-.rathinam-grand-fest-2{
-    display: none;
-}
+/* MEDIA QUERY */
 @media (min-width: 1140px) {
     .rathinam-grand-fest{ display: none}
     .landing .main{
@@ -597,12 +842,18 @@
         justify-self: center;
         align-self: center;
         position: relative;
-
-        /* height: 550px;
-        border: 1px white solid; */
+        height: 550px;
     }
     .rgf-halo #halo{
-        width: 1000px;
+        width: 970px;
+        position: absolute; 
+        top: -4.5%;
+        left: 3%;
+        transform: rotate(-3deg);
+
+        top: -8.9%;
+        transform: rotate(-4deg);
+        z-index: 0;
     }
     .dates{
         margin-top: -15px;
@@ -612,6 +863,7 @@
         position: absolute;
         top: 130px;
         left: 270px;
+        z-index: 1;
     }
     .rgf-container #orb{
         position: absolute;
@@ -622,5 +874,17 @@
     }
     button{
         z-index: 10;
+    }
+
+    .layer3 h1{
+        font-size: 8rem;
+
+    }
+    .layer3 h1::after{
+        -webkit-text-stroke: 8px #860b88;
+
+    }
+    .rgf-container {
+        height: 550px; 
     }
 }
